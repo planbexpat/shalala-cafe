@@ -309,18 +309,22 @@
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             border: 4px solid rgba(255,255,255,0.8);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform: translateZ(0);
+            transform-style: preserve-3d;
         }
         
         .hero-photo-left {
             left: 6%;
             top: 30%;
-            transform: rotate(-5deg);
+            transform: rotate(-5deg) translateZ(0);
         }
         
         .hero-photo-right {
             right: 6%;
             top: 25%;
-            transform: rotate(5deg);
+            transform: rotate(5deg) translateZ(0);
         }
         
         .hero-photo-left img,
@@ -1023,9 +1027,9 @@
             <p class="hero-photo-caption">Our 5-Star Waitress Sidney</p>
         </div>
         
-        <!-- Right floating photo - Cozy seating -->
+        <!-- Right floating photo - Logo on espresso machine -->
         <div class="hero-photo-right">
-            <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604997/IMG_1210_sh4ej3.jpg" alt="Cozy seating at Shalala café">
+            <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601590/IMG_1194_hlzxkg.jpg" alt="Cafeteria Shalala logo on espresso machine">
             <p class="hero-photo-caption">Come on in!</p>
         </div>
         
@@ -1091,9 +1095,9 @@
                     <p style="text-align: center; margin-top: 0.5rem; font-style: italic; color: var(--brown-medium); font-size: 0.9rem;">Roxanne, our adored proud owner, awaits you!</p>
                 </div>
                 
-                <!-- Logo sticker on espresso machine -->
+                <!-- Cozy seating with pillows -->
                 <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601590/IMG_1194_hlzxkg.jpg" alt="Shalala café logo on espresso machine">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604997/IMG_1210_sh4ej3.jpg" alt="Cozy seating with pillows at Shalala café">
                 </div>
                 
                 <!-- Cappuccino -->
@@ -1121,9 +1125,9 @@
                     <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604997/IMG_1217_h15lxu.jpg" alt="Tea and infusions at Shalala café">
                 </div>
                 
-                <!-- Pillows sitting chairs -->
+                <!-- Espresso machine -->
                 <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604997/IMG_1210_sh4ej3.jpg" alt="Cozy seating with pillows at Shalala café">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601584/IMG_1157_vh8qj3.jpg" alt="Espresso machine at Shalala café">
                 </div>
                 
                 <!-- Overview -->
