@@ -908,31 +908,6 @@
         }
         
         /* ============================================
-           SCROLL-TRIGGERED PHOTO REVEALS
-           ============================================ */
-        
-        .gallery-item {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .gallery-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Stagger the animations */
-        .gallery-item:nth-child(2) { transition-delay: 0.1s; }
-        .gallery-item:nth-child(3) { transition-delay: 0.2s; }
-        .gallery-item:nth-child(4) { transition-delay: 0.3s; }
-        .gallery-item:nth-child(5) { transition-delay: 0.4s; }
-        .gallery-item:nth-child(6) { transition-delay: 0.5s; }
-        .gallery-item:nth-child(7) { transition-delay: 0.6s; }
-        .gallery-item:nth-child(8) { transition-delay: 0.7s; }
-        .gallery-item:nth-child(9) { transition-delay: 0.8s; }
-        
-        /* ============================================
            COFFEE STEAM ANIMATION
            ============================================ */
         
@@ -1077,6 +1052,16 @@
                 display: block;
             }
             
+            .about-image {
+                background: transparent;
+                box-shadow: none;
+                height: auto;
+            }
+            
+            .about-image img {
+                object-fit: contain;
+            }
+            
             .mobile-hero-cards {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -1189,7 +1174,7 @@
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="es.html" class="lang-toggle">EN | ES</a></li>
+                <li><a href="es.html" class="lang-toggle">ES</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                 <span></span>
@@ -1525,25 +1510,6 @@
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('mobile-open');
             });
-        });
-        
-        // Scroll-triggered photo reveals
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all gallery items
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            observer.observe(item);
         });
     </script>
 
