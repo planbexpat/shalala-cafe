@@ -486,17 +486,33 @@
         
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
         }
         
         .menu-card {
             background: var(--cream-light);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 20px rgba(74, 53, 40, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid rgba(184, 201, 168, 0.3);
+        }
+        
+        .menu-promo-card {
+            background: var(--cream-light);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(74, 53, 40, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu-promo-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
         
         .menu-card:hover {
@@ -795,6 +811,10 @@
                 grid-row: span 1;
                 aspect-ratio: 16/9;
             }
+            
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 900px) {
@@ -1011,6 +1031,11 @@
             <p class="section-subtitle">Delicious Italian-style Coffee & Homemade Food</p>
             
             <div class="menu-grid">
+                <!-- Combos promo board -->
+                <div class="menu-promo-card">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601593/IMG_1154_dqd4ui.png" alt="Shalala café combo specials">
+                </div>
+                
                 <!-- Café Caliente -->
                 <div class="menu-card">
                     <div class="menu-card-icon">☕</div>
@@ -1057,11 +1082,6 @@
                         <li>Licuados</li>
                     </ul>
                 </div>
-            </div>
-            
-            <!-- Combos promo board -->
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601593/IMG_1154_dqd4ui.png" alt="Shalala café combo specials" style="max-width: 400px; width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
             </div>
             
             <p class="menu-note">Fresh ingredients • Made with love • Ask us for today's specials!</p>
