@@ -299,6 +299,47 @@
             box-shadow: 0 6px 20px rgba(196, 69, 58, 0.35);
         }
         
+        /* Hero floating photos */
+        .hero-photo-left,
+        .hero-photo-right {
+            position: absolute;
+            z-index: 3;
+            width: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border: 4px solid rgba(255,255,255,0.8);
+        }
+        
+        .hero-photo-left {
+            left: 8%;
+            top: 35%;
+            transform: rotate(-5deg);
+        }
+        
+        .hero-photo-right {
+            right: 8%;
+            top: 30%;
+            transform: rotate(5deg);
+        }
+        
+        .hero-photo-left img,
+        .hero-photo-right img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .hero-photo-caption {
+            background: rgba(255,255,255,0.9);
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            font-style: italic;
+            color: var(--brown-dark);
+            margin: 0;
+        }
+        
         /* ============================================
            SECTIONS - General
            ============================================ */
@@ -838,6 +879,28 @@
             }
         }
         
+        @media (max-width: 1200px) {
+            .hero-photo-left,
+            .hero-photo-right {
+                width: 160px;
+            }
+            
+            .hero-photo-left {
+                left: 3%;
+            }
+            
+            .hero-photo-right {
+                right: 3%;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .hero-photo-left,
+            .hero-photo-right {
+                display: none;
+            }
+        }
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -933,6 +996,19 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg"></div>
+        
+        <!-- Left floating photo - Sidney -->
+        <div class="hero-photo-left">
+            <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601582/IMG_1156_qgx4pv.jpg" alt="Sidney preparing cappuccino">
+            <p class="hero-photo-caption">Our 5-Star Waitress Sidney</p>
+        </div>
+        
+        <!-- Right floating photo - Looking in -->
+        <div class="hero-photo-right">
+            <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601590/IMG_1213_cbm3t5.jpg" alt="View into Shalala café">
+            <p class="hero-photo-caption">Come on in!</p>
+        </div>
+        
         <div class="hero-content">
             <div class="hero-logo"><img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770603167/Shalala_Text_Logo_p2hv8u.png" alt="Sha la la" style="max-width: 350px; height: auto;"></div>
             <p class="hero-subtitle">CAFÉ ITALIANO</p>
@@ -954,7 +1030,7 @@
                     <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770591603/IMG_1151_3_1_ywanu3.png" alt="Shalala Café Italiano logo - vintage pin-up girl">
                 </div>
                 <div class="about-text">
-                    <p>Welcome to Shalala, where authentic Italian coffee meets Caribbean charm.</p>
+                    <p>Welcome to Shalala, where authentic Italian coffee meets Playa Del Carmen Caribbean charm.</p>
                     <p>Our café is nestled under a traditional Mayan palapa roof, keeping the space naturally cool even on the hottest Playa del Carmen days. No AC needed - just nature's own design.</p>
                     <p>Every cup is crafted on our Italian Casadio espresso machine using carefully selected beans. From our artisanal croissants baked fresh each morning to our famous baguettes, everything is made with love and dedication.</p>
                 </div>
@@ -1005,10 +1081,9 @@
                     <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601585/IMG_1180_kwpjei.jpg" alt="Cappuccino at Shalala café">
                 </div>
                 
-                <!-- Sidney preparing cappuccino -->
+                <!-- Upstairs area -->
                 <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601582/IMG_1156_qgx4pv.jpg" alt="Barista preparing cappuccino at Shalala café">
-                    <p style="text-align: center; margin-top: 0.5rem; font-style: italic; color: var(--brown-medium); font-size: 0.9rem;">Our 5-Star Waitress Sidney will always greet you with a wave and a smile - ¡Hola! - whether you walk by or enter</p>
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601585/IMG_1169_due9lg.jpg" alt="Upstairs seating area at Shalala café">
                 </div>
                 
                 <!-- Sidewalk view -->
@@ -1016,9 +1091,24 @@
                     <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601585/IMG_1152_onox2g.jpg" alt="Sidewalk view of Shalala café">
                 </div>
                 
-                <!-- Espresso machine -->
+                <!-- Stools bar counter -->
                 <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601584/IMG_1157_vh8qj3.jpg" alt="Espresso machine at Shalala café">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604995/IMG_1179_vnrvn8.jpg" alt="Bar stools at Shalala café counter">
+                </div>
+                
+                <!-- Tea and infusions -->
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604997/IMG_1217_h15lxu.jpg" alt="Tea and infusions at Shalala café">
+                </div>
+                
+                <!-- Pillows sitting chairs -->
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604997/IMG_1210_sh4ej3.jpg" alt="Cozy seating with pillows at Shalala café">
+                </div>
+                
+                <!-- Overview -->
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604994/IMG_1175_tunefu.jpg" alt="Overview of Shalala café">
                 </div>
             </div>
         </div>
@@ -1049,22 +1139,23 @@
                         <li>Moka</li>
                         <li>Raf Café</li>
                         <li>Café + Baileys</li>
+                        <li>Té / Infusiones</li>
                     </ul>
                 </div>
                 
                 <!-- Café Frío -->
                 <div class="menu-card">
                     <div class="menu-card-icon">🧊</div>
-                    <h3>Café Frío</h3>
+                    <h3>Café Frío & Bebidas</h3>
                     <ul class="menu-list">
                         <li>Espresso Frío</li>
                         <li>Americano Frío</li>
                         <li>Latte Frío</li>
-                        <li>Latte Sabor</li>
-                        <li>Frappé</li>
-                        <li>Frappé de Frutas</li>
-                        <li>Raf Café</li>
-                        <li>Té Frío</li>
+                        <li>Frappé & Frappé de Frutas</li>
+                        <li>Smoothies</li>
+                        <li>Jugos & Mix de Jugos</li>
+                        <li>Aguas de Fruta</li>
+                        <li>Licuados con Leche</li>
                     </ul>
                 </div>
                 
@@ -1074,12 +1165,13 @@
                     <h3>Para Comer</h3>
                     <ul class="menu-list">
                         <li>Croissants Artesanales</li>
-                        <li>Baguettes Franceses</li>
+                        <li>Baguettes Especiales</li>
                         <li>Omelettes Shalala</li>
                         <li>Bruschettas</li>
-                        <li>Desayunos Completos</li>
-                        <li>Smoothies & Jugos</li>
-                        <li>Licuados</li>
+                        <li>Paquetes de Desayunos</li>
+                        <li>Huevos al Gusto</li>
+                        <li>Bowl de Avena con Fruta</li>
+                        <li>Pan Tostado Casero</li>
                     </ul>
                 </div>
             </div>
