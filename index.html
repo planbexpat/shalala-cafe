@@ -304,7 +304,7 @@
         .hero-photo-right {
             position: absolute;
             z-index: 3;
-            width: 200px;
+            width: 280px;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
@@ -312,14 +312,14 @@
         }
         
         .hero-photo-left {
-            left: 8%;
-            top: 35%;
+            left: 6%;
+            top: 30%;
             transform: rotate(-5deg);
         }
         
         .hero-photo-right {
-            right: 8%;
-            top: 30%;
+            right: 6%;
+            top: 25%;
             transform: rotate(5deg);
         }
         
@@ -882,7 +882,7 @@
         @media (max-width: 1200px) {
             .hero-photo-left,
             .hero-photo-right {
-                width: 160px;
+                width: 220px;
             }
             
             .hero-photo-left {
@@ -895,6 +895,23 @@
         }
         
         @media (max-width: 900px) {
+            .hero-photo-left,
+            .hero-photo-right {
+                width: 160px;
+            }
+            
+            .hero-photo-left {
+                left: 2%;
+                top: 25%;
+            }
+            
+            .hero-photo-right {
+                right: 2%;
+                top: 20%;
+            }
+        }
+        
+        @media (max-width: 650px) {
             .hero-photo-left,
             .hero-photo-right {
                 display: none;
@@ -1003,9 +1020,9 @@
             <p class="hero-photo-caption">Our 5-Star Waitress Sidney</p>
         </div>
         
-        <!-- Right floating photo - Looking in -->
+        <!-- Right floating photo - Overview -->
         <div class="hero-photo-right">
-            <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601590/IMG_1213_cbm3t5.jpg" alt="View into Shalala café">
+            <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770604994/IMG_1175_tunefu.jpg" alt="Overview of Shalala café">
             <p class="hero-photo-caption">Come on in!</p>
         </div>
         
@@ -1122,56 +1139,56 @@
             
             <div class="menu-grid">
                 <!-- Combos promo board -->
-                <div class="menu-promo-card">
-                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601593/IMG_1154_dqd4ui.png" alt="Shalala café combo specials">
+                <div class="menu-promo-card" style="display: flex; align-items: stretch; height: 100%; padding: 0.5rem;">
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601593/IMG_1154_dqd4ui.png" alt="Shalala café combo specials" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                 </div>
                 
                 <!-- Café Caliente -->
                 <div class="menu-card">
                     <div class="menu-card-icon">☕</div>
-                    <h3>Café Caliente</h3>
+                    <h3>Hot Coffee</h3>
                     <ul class="menu-list">
-                        <li>Espresso & Espresso Doble</li>
+                        <li>Espresso & Double Espresso</li>
                         <li>Cappuccino</li>
                         <li>Latte & Latte Macchiato</li>
                         <li>Americano</li>
                         <li>Flat White</li>
-                        <li>Moka</li>
-                        <li>Raf Café</li>
-                        <li>Café + Baileys</li>
-                        <li>Té / Infusiones</li>
+                        <li>Mocha</li>
+                        <li>Raf Coffee</li>
+                        <li>Coffee + Baileys</li>
+                        <li>Tea / Infusions</li>
                     </ul>
                 </div>
                 
                 <!-- Café Frío -->
                 <div class="menu-card">
                     <div class="menu-card-icon">🧊</div>
-                    <h3>Café Frío & Bebidas</h3>
+                    <h3>Cold Coffee & Drinks</h3>
                     <ul class="menu-list">
-                        <li>Espresso Frío</li>
-                        <li>Americano Frío</li>
-                        <li>Latte Frío</li>
-                        <li>Frappé & Frappé de Frutas</li>
+                        <li>Iced Espresso</li>
+                        <li>Iced Americano</li>
+                        <li>Iced Latte</li>
+                        <li>Frappé & Fruit Frappé</li>
                         <li>Smoothies</li>
-                        <li>Jugos & Mix de Jugos</li>
-                        <li>Aguas de Fruta</li>
-                        <li>Licuados con Leche</li>
+                        <li>Juices & Juice Mixes</li>
+                        <li>Fruit Waters</li>
+                        <li>Milk Smoothies</li>
                     </ul>
                 </div>
                 
                 <!-- Para Comer -->
                 <div class="menu-card">
                     <div class="menu-card-icon">🥐</div>
-                    <h3>Para Comer</h3>
+                    <h3>Food</h3>
                     <ul class="menu-list">
-                        <li>Croissants Artesanales</li>
-                        <li>Baguettes Especiales</li>
-                        <li>Omelettes Shalala</li>
+                        <li>Artisan Croissants</li>
+                        <li>Specialty Baguettes</li>
+                        <li>Shalala Omelettes</li>
                         <li>Bruschettas</li>
-                        <li>Paquetes de Desayunos</li>
-                        <li>Huevos al Gusto</li>
-                        <li>Bowl de Avena con Fruta</li>
-                        <li>Pan Tostado Casero</li>
+                        <li>Breakfast Packages</li>
+                        <li>Eggs Your Way</li>
+                        <li>Oatmeal Bowl with Fruit</li>
+                        <li>Homemade Toast</li>
                     </ul>
                 </div>
             </div>
