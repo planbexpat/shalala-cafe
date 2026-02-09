@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalala Café Italiano | Best Coffee in Playa del Carmen</title>
+    <meta name="description" content="Authentic Italian coffee meets Caribbean charm. Fresh croissants, artisanal baguettes, and the best espresso in Playa del Carmen. Naturally cool under our traditional palapa roof.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           SHALALA CAFÉ ITALIANO - Stylesheet
+           Colors from actual café interior photos
+           ============================================ */
+        
+        :root {
+            /* Primary backgrounds */
+            --cream: #F5F0E6;
+            --cream-light: #FDFBF7;
+            
+            /* Caribbean teal-blue walls (from watercolor wall photo) */
+            --caribbean-light: #A8D4D4;
+            --caribbean: #5BB5B5;
+            --caribbean-dark: #3A9A9A;
+            
+            /* Deep teal (bottom of gradient wall) */
+            --teal-light: #7BB5B5;
+            --teal: #4A9B9B;
+            --teal-dark: #2D7A7A;
+            
+            /* Sage green (counters/shelves/tables) */
+            --sage-light: #D8E4D0;
+            --sage: #C5D4C0;
+            --sage-dark: #A8C4B0;
+            
+            /* Earth tones (palapa, wood, floor) */
+            --straw: #C4A564;
+            --wood-light: #A67C52;
+            --wood: #8B5A3C;
+            --wood-dark: #5C3D2E;
+            --stone: #9B7355;
+            
+            /* Accent (from logo) */
+            --terracotta: #C4453A;
+            --terracotta-dark: #A63829;
+            
+            /* Text */
+            --brown-dark: #4A3528;
+            --brown-medium: #6B5344;
+            --brown-light: #8B7355;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background-color: var(--cream);
+            color: var(--brown-dark);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(245, 240, 230, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(74, 53, 40, 0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: var(--terracotta);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--brown-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--terracotta);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+        
+        .lang-toggle {
+            background: transparent;
+            border: 1px solid var(--brown-medium);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--brown-medium);
+            cursor: pointer;
+            font-family: 'Lora', serif;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-toggle:hover {
+            background: var(--brown-dark);
+            color: var(--cream);
+            border-color: var(--brown-dark);
+        }
+        
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--brown-dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(245, 240, 230, 0.92) 0%, rgba(245, 240, 230, 0.85) 50%, rgba(184, 201, 168, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920') center/cover;
+            z-index: 0;
+        }
+        
+        /* Watercolor texture overlay inspired by the teal walls */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(74, 155, 155, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(184, 201, 168, 0.2) 0%, transparent 50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+        
+        .hero-logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            color: var(--terracotta);
+            margin-bottom: 0.3rem;
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+        }
+        
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.35em;
+            color: var(--brown-dark);
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+        
+        .hero-location {
+            font-size: 1rem;
+            color: var(--brown-medium);
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .hero-divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--teal), transparent);
+            margin: 1.5rem auto;
+            border-radius: 2px;
+        }
+        
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: var(--brown-dark);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .hero-quote {
+            font-style: italic;
+            color: var(--brown-medium);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: var(--terracotta);
+            color: var(--cream-light);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(196, 69, 58, 0.25);
+        }
+        
+        .btn-primary:hover {
+            background: var(--terracotta-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(196, 69, 58, 0.35);
+        }
+        
+        /* ============================================
+           SECTIONS - General
+           ============================================ */
+        
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--brown-dark);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--brown-medium);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        
+        .about {
+            background: var(--cream);
+            position: relative;
+        }
+        
+        /* Subtle teal watercolor effect on one side */
+        .about::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 40%;
+            background: linear-gradient(90deg, rgba(74, 155, 155, 0.08) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(74, 53, 40, 0.15);
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .about-highlight {
+            background: linear-gradient(135deg, var(--sage-light) 0%, var(--sage) 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2.5rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(157, 184, 146, 0.3);
+        }
+        
+        .about-highlight span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--brown-dark);
+            font-weight: 500;
+        }
+        
+        /* ============================================
+           GALLERY SECTION
+           ============================================ */
+        
+        .gallery {
+            background: linear-gradient(180deg, var(--caribbean-light) 0%, var(--caribbean) 50%, var(--caribbean-light) 100%);
+            padding: 5rem 2rem;
+        }
+        
+        .gallery .section-title,
+        .gallery .section-subtitle {
+            color: var(--cream-light);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            box-shadow: 0 4px 20px rgba(74, 53, 40, 0.1);
+            cursor: pointer;
+        }
+        
+        .gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(74, 53, 40, 0.3) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        /* ============================================
+           MENU SECTION
+           ============================================ */
+        
+        .menu {
+            background: var(--cream);
+            position: relative;
+        }
+        
+        /* Teal accent stripe */
+        .menu::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--sage), var(--teal), var(--sage));
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .menu-card {
+            background: var(--cream-light);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(74, 53, 40, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(184, 201, 168, 0.3);
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(74, 53, 40, 0.12);
+        }
+        
+        .menu-card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .menu-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--brown-dark);
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--caribbean-light);
+        }
+        
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu-list li {
+            padding: 0.5rem 0;
+            color: var(--brown-dark);
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(197, 212, 192, 0.3);
+        }
+        
+        .menu-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .menu-item-name {
+            color: var(--brown-dark);
+        }
+        
+        .menu-item-price {
+            color: var(--teal-dark);
+            font-weight: 600;
+        }
+        
+        .menu-note {
+            text-align: center;
+            margin-top: 2.5rem;
+            color: var(--brown-medium);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        
+        /* ============================================
+           LOCATION SECTION
+           ============================================ */
+        
+        .location {
+            background: linear-gradient(180deg, var(--caribbean-light) 0%, var(--cream) 100%);
+            position: relative;
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .location-map {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(74, 53, 40, 0.15);
+        }
+        
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .location-info {
+            background: var(--cream-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(74, 53, 40, 0.1);
+        }
+        
+        .location-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--teal-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .location-address {
+            margin-bottom: 1.5rem;
+        }
+        
+        .location-address p {
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+        
+        .location-landmark {
+            background: linear-gradient(135deg, var(--caribbean) 0%, var(--caribbean-dark) 100%);
+            color: white;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        .location-hours {
+            margin-top: 1.5rem;
+        }
+        
+        .location-hours p {
+            margin-bottom: 0.4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .closed {
+            color: var(--terracotta);
+            font-weight: 600;
+        }
+        
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        
+        .contact {
+            background: var(--cream);
+            position: relative;
+        }
+        
+        /* Decorative teal watercolor blob */
+        .contact::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(ellipse, rgba(74, 155, 155, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--cream-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(74, 53, 40, 0.1);
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(184, 201, 168, 0.3);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--brown-dark);
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 2px solid var(--sage);
+            border-radius: 8px;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            background: white;
+            color: var(--brown-dark);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 4px rgba(74, 155, 155, 0.15);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--terracotta);
+            color: var(--cream-light);
+            border: none;
+            border-radius: 8px;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(196, 69, 58, 0.25);
+        }
+        
+        .form-submit:hover {
+            background: var(--terracotta-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(196, 69, 58, 0.35);
+        }
+        
+        .form-note {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--brown-medium);
+        }
+        
+        /* ============================================
+           FOOTER
+           ============================================ */
+        
+        footer {
+            background: linear-gradient(135deg, var(--wood-dark) 0%, var(--brown-dark) 100%);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+            position: relative;
+        }
+        
+        /* Palapa-inspired texture stripe */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--straw), var(--wood-light), var(--straw), var(--wood-light), var(--straw));
+        }
+        
+        .footer-logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-tagline {
+            color: var(--sage-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .footer-heart {
+            font-size: 0.9rem;
+            color: var(--teal-light);
+        }
+        
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: span 1;
+                aspect-ratio: 16/9;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+            
+            .about-grid,
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 350px;
+            }
+            
+            .location-map {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-logo {
+                font-size: 3.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                letter-spacing: 0.2em;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3.5rem 1.5rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            
+            .gallery-item:first-child {
+                grid-column: span 2;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item:first-child {
+                grid-column: span 1;
+            }
+            
+            .about-highlight {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        /* Mobile navigation overlay */
+        .nav-links.mobile-open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--cream);
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(74, 53, 40, 0.1);
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Sha la la</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="lang-toggle">EN | ES</button></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-logo">Sha la la</h1>
+            <p class="hero-subtitle">CAFÉ ITALIANO</p>
+            <p class="hero-location">Playa del Carmen</p>
+            <div class="hero-divider"></div>
+            <p class="hero-tagline">Best Coffee in Playa and Exquisite Dishes</p>
+            <p class="hero-quote">"Coffee is not just a drink, it's a very special moment"</p>
+            <a href="#location" class="btn-primary">Visit Us</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <!-- Testing Cloudinary image -->
+                    <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770591616/IMG_1203_1_qbjaj9.png" alt="Shalala Café Italiano logo - vintage pin-up girl">
+                </div>
+                <div class="about-text">
+                    <p>Welcome to Shalala, where authentic Italian coffee meets Caribbean charm.</p>
+                    <p>Our café is nestled under a traditional Mayan palapa roof, keeping the space naturally cool even on the hottest Playa del Carmen days. No AC needed - just nature's own design.</p>
+                    <p>Every cup is crafted on our Italian Casadio espresso machine using carefully selected beans. From our artisanal croissants baked fresh each morning to our famous baguettes, everything is made with love and dedication.</p>
+                </div>
+            </div>
+            <div class="about-highlight">
+                <span>☕ Authentic Italian espresso</span>
+                <span>🥐 Fresh-baked pastries daily</span>
+                <span>🌿 Naturally cool palapa roof</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-container">
+            <h2 class="section-title">Our Space</h2>
+            <p class="section-subtitle">Where Caribbean charm meets Italian soul</p>
+            
+            <div class="gallery-grid">
+                <!-- Large feature image -->
+                <div class="gallery-item">
+                    <!-- REPLACE: Interior with teal wall and palapa IMG_1167 -->
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Shalala café interior with teal walls and palapa roof">
+                </div>
+                
+                <!-- Smaller images -->
+                <div class="gallery-item">
+                    <!-- REPLACE: Overhead bar view IMG_1176 -->
+                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80" alt="Overhead view of Shalala café bar">
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- REPLACE: Outdoor seating IMG_1208 -->
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80" alt="Outdoor seating at Shalala café">
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- REPLACE: Exterior with palapa IMG_1163 -->
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80" alt="Shalala café exterior with palapa roof">
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- REPLACE: Espresso machine sticker IMG_1194 -->
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80" alt="Shalala café logo on espresso machine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="section-container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Delicious Italian-style Coffee & Homemade Food</p>
+            
+            <div class="menu-grid">
+                <!-- Café Caliente -->
+                <div class="menu-card">
+                    <div class="menu-card-icon">☕</div>
+                    <h3>Café Caliente</h3>
+                    <ul class="menu-list">
+                        <li>Espresso & Espresso Doble</li>
+                        <li>Cappuccino</li>
+                        <li>Latte & Latte Macchiato</li>
+                        <li>Americano</li>
+                        <li>Flat White</li>
+                        <li>Moka</li>
+                        <li>Raf Café</li>
+                        <li>Café + Baileys</li>
+                    </ul>
+                </div>
+                
+                <!-- Café Frío -->
+                <div class="menu-card">
+                    <div class="menu-card-icon">🧊</div>
+                    <h3>Café Frío</h3>
+                    <ul class="menu-list">
+                        <li>Espresso Frío</li>
+                        <li>Americano Frío</li>
+                        <li>Latte Frío</li>
+                        <li>Latte Sabor</li>
+                        <li>Frappé</li>
+                        <li>Frappé de Frutas</li>
+                        <li>Raf Café</li>
+                        <li>Té Frío</li>
+                    </ul>
+                </div>
+                
+                <!-- Para Comer -->
+                <div class="menu-card">
+                    <div class="menu-card-icon">🥐</div>
+                    <h3>Para Comer</h3>
+                    <ul class="menu-list">
+                        <li>Croissants Artesanales</li>
+                        <li>Baguettes Franceses</li>
+                        <li>Omelettes Shalala</li>
+                        <li>Bruschettas</li>
+                        <li>Desayunos Completos</li>
+                        <li>Smoothies & Jugos</li>
+                        <li>Licuados</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="menu-note">Fresh ingredients • Made with love • Ask us for today's specials!</p>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="section-container">
+            <h2 class="section-title">Find Us</h2>
+            <p class="section-subtitle">We're easy to find - look for the pin-up girl sign!</p>
+            
+            <div class="location-grid">
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.38250036831496!2d-87.07797868942345!3d20.62396474749269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e435ba9829d8d%3A0x202a921e9b08e76b!2sComida%20y%20Caf%C3%A9!5e0!3m2!1sen!2smx!4v1770597235176!5m2!1sen!2smx"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="location-info">
+                    <h3>📍 Address</h3>
+                    <div class="location-address">
+                        <p><strong>Calle 4 Norte</strong></p>
+                        <p>entre Av. 10 y Av. 15</p>
+                        <p>Centro, Playa del Carmen</p>
+                        <p>Quintana Roo, Mexico</p>
+                    </div>
+                    
+                    <div class="location-landmark">
+                        🍺 Next to Manne's Biergarten (German restaurant)
+                    </div>
+                    
+                    <div class="location-hours">
+                        <h3>🕐 Hours</h3>
+                        <p><span>Monday</span> <span>7:00 AM - 8:00 PM</span></p>
+                        <p class="closed"><span>Tuesday</span> <span>Closed</span></p>
+                        <p><span>Wednesday</span> <span>7:00 AM - 8:00 PM</span></p>
+                        <p><span>Thursday</span> <span>7:00 AM - 8:00 PM</span></p>
+                        <p><span>Friday</span> <span>7:00 AM - 8:00 PM</span></p>
+                        <p><span>Saturday</span> <span>7:00 AM - 8:00 PM</span></p>
+                        <p><span>Sunday</span> <span>7:00 AM - 8:00 PM</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Planning a visit? Have questions? We'd love to hear from you.</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="">Select your country</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Germany">Germany</option>
+                        <option value="France">France</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us what's on your mind..."></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Send Message</button>
+                <p class="form-note">We'll only use your email to respond to your message.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-logo">Sha la la</p>
+        <p class="footer-tagline">Café Italiano • Playa del Carmen</p>
+        <p class="footer-heart">Made with ☕ in the Caribbean</p>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('mobile-open');
+        }
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('mobile-open');
+            });
+        });
+    </script>
+
+</body>
+</html>
