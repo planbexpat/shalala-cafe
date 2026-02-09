@@ -1511,7 +1511,247 @@
                 document.getElementById('navLinks').classList.remove('mobile-open');
             });
         });
+        
+        // Show proposal modal on page load
+        window.addEventListener('load', function() {
+            document.getElementById('proposalModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        function closeProposalModal() {
+            document.getElementById('proposalModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
     </script>
+    
+    <!-- Proposal Modal -->
+    <div id="proposalModal" class="proposal-modal">
+        <div class="proposal-content">
+            <button class="proposal-close" onclick="closeProposalModal()">&times;</button>
+            
+            <h1 class="proposal-title">Hello Roxanne,</h1>
+            
+            <p class="proposal-intro">I created this website as a proposal for Shalala, so you can see what's possible before making any decision.</p>
+            
+            <h2 class="proposal-section-title">The site includes</h2>
+            
+            <div class="proposal-grid">
+                <div>
+                    <h4 class="proposal-category">Design</h4>
+                    <ul class="proposal-list">
+                        <li>Natural colors aligned with Shalala's identity</li>
+                        <li>Works perfectly on phone and computer</li>
+                        <li>Photo gallery</li>
+                        <li>Spanish and English</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="proposal-category">Functionality</h4>
+                    <ul class="proposal-list">
+                        <li>Direct WhatsApp button</li>
+                        <li>Professional email</li>
+                        <li>Contact form</li>
+                        <li>Full menu</li>
+                        <li>Hours and location</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="proposal-grid">
+                <div>
+                    <h4 class="proposal-category">Visibility</h4>
+                    <ul class="proposal-list">
+                        <li>Domain: shalalacafe.com</li>
+                        <li>Google Maps registration</li>
+                        <li>Basic search engine optimization</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="proposal-category">Performance</h4>
+                    <ul class="proposal-list">
+                        <li>Fast loading</li>
+                        <li>Optimized images</li>
+                        <li>Technical setup ready to use</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2 class="proposal-section-title">Proposal</h2>
+            
+            <p class="proposal-intro">If you like the site and see value for your business, the price for everything above is <strong>$8,000 MXN ($400 USD)</strong>. Includes design, development, and leaving the site ready to publish.</p>
+            
+            <h2 class="proposal-section-title">Maintenance (optional)</h2>
+            
+            <div class="proposal-maintenance-box">
+                <p><strong>$800 MXN/month ($40 USD)</strong></p>
+                <p>Includes:</p>
+                <ul class="proposal-list">
+                    <li>Site hosting</li>
+                    <li>Annual domain renewal</li>
+                    <li>Basic security</li>
+                    <li>Small changes like menu, hours, text or photos</li>
+                    <li>Technical support</li>
+                </ul>
+                <p class="proposal-note">The idea is that you don't have to worry about anything technical.</p>
+            </div>
+            
+            <h2 class="proposal-section-title">If you prefer no maintenance</h2>
+            
+            <p class="proposal-intro">No problem at all. I'll hand over the complete site and files for you to host wherever you prefer. Just keep in mind that the domain (shalalacafe.com) renews each year (~$280 MXN) and that would be on your side. Any future changes would be quoted separately.</p>
+            
+            <p class="proposal-signature">Best regards,<br>Michael</p>
+            
+            <button onclick="closeProposalModal()" class="proposal-button">View the Website</button>
+        </div>
+    </div>
+    
+    <style>
+        .proposal-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .proposal-content {
+            background: var(--cream);
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            border-radius: 16px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .proposal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--brown-medium);
+            line-height: 1;
+        }
+        
+        .proposal-close:hover {
+            color: var(--terracotta);
+        }
+        
+        .proposal-title {
+            color: var(--terracotta);
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .proposal-intro {
+            font-size: 1rem;
+            color: var(--brown-medium);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .proposal-section-title {
+            color: var(--teal-dark);
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--caribbean-light);
+            padding-bottom: 0.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        .proposal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .proposal-category {
+            color: var(--brown-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .proposal-list {
+            font-size: 0.9rem;
+            color: var(--brown-medium);
+            padding-left: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .proposal-maintenance-box {
+            background: var(--cream-light);
+            border-left: 3px solid var(--teal);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+        }
+        
+        .proposal-maintenance-box p {
+            margin: 0 0 0.5rem 0;
+            color: var(--brown-medium);
+        }
+        
+        .proposal-maintenance-box .proposal-list {
+            margin-top: 0.5rem;
+        }
+        
+        .proposal-note {
+            margin-top: 1rem !important;
+            font-style: italic;
+            color: var(--brown-light) !important;
+        }
+        
+        .proposal-signature {
+            margin-top: 2rem;
+            color: var(--brown-medium);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .proposal-button {
+            background: var(--terracotta);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            font-family: 'Lora', serif;
+            transition: background 0.3s ease;
+        }
+        
+        .proposal-button:hover {
+            background: var(--terracotta-dark);
+        }
+        
+        @media (max-width: 600px) {
+            .proposal-content {
+                padding: 1.5rem;
+            }
+            
+            .proposal-title {
+                font-size: 1.5rem;
+            }
+            
+            .proposal-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
 
 </body>
 </html>
