@@ -486,6 +486,164 @@
         }
         
         /* ============================================
+           THE 4 M'S SECTION
+           ============================================ */
+        
+        .four-ms {
+            background: linear-gradient(135deg, #3d2314 0%, #5c3a2a 50%, #4a3528 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .four-ms::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://res.cloudinary.com/dmuw7qums/image/upload/v1770590163/IMG_1185_spymbo.jpg') center/cover no-repeat;
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        
+        .four-ms .section-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .four-ms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .four-ms-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--cream-light);
+            margin-bottom: 1rem;
+        }
+        
+        .four-ms-intro {
+            font-size: 1.1rem;
+            color: rgba(255, 252, 247, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .four-ms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+        
+        .four-ms-content {
+            color: var(--cream-light);
+        }
+        
+        .four-ms-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .four-ms-item {
+            margin-bottom: 1.75rem;
+        }
+        
+        .four-ms-item-title {
+            font-family: 'Lora', serif;
+            font-size: 1.25rem;
+            color: var(--cream-light);
+            margin-bottom: 0.4rem;
+        }
+        
+        .four-ms-item-title span {
+            color: #e8a87c;
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        .four-ms-item p {
+            color: rgba(255, 252, 247, 0.85);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .four-ms-closing {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 252, 247, 0.2);
+            font-style: italic;
+            color: rgba(255, 252, 247, 0.9);
+            font-size: 1rem;
+        }
+        
+        .four-ms-images {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        
+        .four-ms-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .four-ms-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .four-ms-image:first-child img {
+            height: 250px;
+        }
+        
+        @media (max-width: 900px) {
+            .four-ms-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .four-ms-title {
+                font-size: 2.5rem;
+            }
+            
+            .four-ms-images {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .four-ms-image {
+                flex: 1;
+                min-width: 150px;
+            }
+            
+            .four-ms-image img,
+            .four-ms-image:first-child img {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .four-ms-images {
+                flex-direction: column;
+            }
+            
+            .four-ms-image {
+                min-width: 100%;
+            }
+        }
+        
+        /* ============================================
            GALLERY SECTION
            ============================================ */
         
@@ -1170,6 +1328,7 @@
             <a href="#" class="nav-logo"><img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770603167/Shalala_Text_Logo_p2hv8u.png" alt="Sha la la" style="height: 40px;"></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">Nosotros</a></li>
+                <li><a href="#four-ms">4 M's</a></li>
                 <li><a href="#gallery">Galería</a></li>
                 <li><a href="#menu">Menú</a></li>
                 <li><a href="#location">Ubicación</a></li>
@@ -1239,13 +1398,63 @@
                 <div class="about-text">
                     <p>Bienvenidos a Shalala, donde el auténtico café italiano se encuentra con el encanto caribeño de Playa del Carmen.</p>
                     <p>Nuestro café está ubicado bajo un tradicional techo de palapa maya, manteniendo el espacio naturalmente fresco incluso en los días más calurosos de Playa del Carmen. No necesitamos aire acondicionado - solo el diseño de la naturaleza.</p>
-                    <p>Cada taza está elaborada en nuestra máquina de espresso italiana Casadio usando granos cuidadosamente seleccionados. Desde nuestros croissants artesanales horneados frescos cada mañana hasta nuestras famosas baguettes, todo está hecho con amor y dedicación.</p>
+                    <p>Cada taza está elaborada en nuestra máquina de espresso italiana Casadio siguiendo el método tradicional de las 4 M's, usando granos cuidadosamente seleccionados, molienda de precisión y la mano experta de nuestros baristas. Desde nuestros croissants artesanales horneados frescos cada mañana hasta nuestras famosas baguettes, todo está hecho con amor y dedicación.</p>
                 </div>
             </div>
             <div class="about-highlight">
                 <span>☕ Auténtico espresso italiano</span>
                 <span>🥐 Repostería fresca diaria</span>
                 <span>🌿 Techo de palapa naturalmente fresco</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 4 M's Section -->
+    <section class="four-ms" id="four-ms">
+        <div class="section-container">
+            <div class="four-ms-header">
+                <h2 class="four-ms-title">Las 4 M's del Café Italiano</h2>
+                <p class="four-ms-intro">En Shalala, seguimos la tradición italiana de las 4 M's, una filosofía que transforma simples granos en un espresso inolvidable.</p>
+            </div>
+            
+            <div class="four-ms-grid">
+                <div class="four-ms-content">
+                    <ul class="four-ms-list">
+                        <li class="four-ms-item">
+                            <h3 class="four-ms-item-title">1. Miscela <span>- La Mezcla</span></h3>
+                            <p>Todo comienza con los granos. Elegimos tuestes italianos de alta calidad que equilibran aroma, cuerpo y una crema rica. Un gran café comienza con grandes ingredientes.</p>
+                        </li>
+                        <li class="four-ms-item">
+                            <h3 class="four-ms-item-title">2. Macinatura <span>- La Molienda</span></h3>
+                            <p>Molido fresco para cada taza. La molienda tiene que ser exacta, ni muy fina ni muy gruesa, para que cada espresso tenga un sabor equilibrado y completo.</p>
+                        </li>
+                        <li class="four-ms-item">
+                            <h3 class="four-ms-item-title">3. Macchina <span>- La Máquina</span></h3>
+                            <p>Nuestra máquina de espresso es el corazón de Shalala. Cuidadosamente mantenida y calibrada con precisión, entrega consistencia en cada shot.</p>
+                        </li>
+                        <li class="four-ms-item">
+                            <h3 class="four-ms-item-title">4. Mano <span>- La Mano</span></h3>
+                            <p>Finalmente, el toque humano. El barista sabe cuándo prensar, cuándo extraer y cuándo está perfecto. Aquí es donde la técnica se convierte en arte.</p>
+                        </li>
+                    </ul>
+                    
+                    <p class="four-ms-closing">Así preparamos cada café en Shalala, con cuidado, intención y un poco de alma italiana.</p>
+                </div>
+                
+                <div class="four-ms-images">
+                    <!-- Barista at work -->
+                    <div class="four-ms-image">
+                        <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770601582/IMG_1156_qgx4pv.jpg" alt="Barista en Shalala">
+                    </div>
+                    <!-- Espresso machine -->
+                    <div class="four-ms-image">
+                        <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770590127/IMG_1157_qcjpqs.jpg" alt="Máquina de espresso en Shalala">
+                    </div>
+                    <!-- Cappuccino -->
+                    <div class="four-ms-image">
+                        <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770590158/IMG_1180_dl3bjw.jpg" alt="Cappuccino en Shalala" style="object-position: center 30%;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
