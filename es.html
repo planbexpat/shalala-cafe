@@ -485,6 +485,27 @@
             font-weight: 500;
         }
         
+        /* Mobile-only branding image */
+        .about-mobile-image {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .about-mobile-image {
+                display: block;
+                text-align: center;
+                margin: 2rem 0;
+            }
+            
+            .about-mobile-image img {
+                max-width: 280px;
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(74, 53, 40, 0.15);
+            }
+        }
+        
         /* ============================================
            THE 4 M'S SECTION
            ============================================ */
@@ -1401,6 +1422,12 @@
                     <p>Cada taza está elaborada en nuestra máquina de espresso italiana Casadio siguiendo el método tradicional de las 4 M's, usando granos cuidadosamente seleccionados, molienda de precisión y la mano experta de nuestros baristas. Desde nuestros croissants artesanales horneados frescos cada mañana hasta nuestras famosas baguettes, todo está hecho con amor y dedicación.</p>
                 </div>
             </div>
+            
+            <!-- Mobile-only branding image -->
+            <div class="about-mobile-image">
+                <img src="https://res.cloudinary.com/dmuw7qums/image/upload/v1770603167/Shalala_Main_Logo_f5dj8k.png" alt="Shalala Café">
+            </div>
+            
             <div class="about-highlight">
                 <span>☕ Auténtico espresso italiano</span>
                 <span>🥐 Repostería fresca diaria</span>
