@@ -860,12 +860,34 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(74, 53, 40, 0.15);
+            position: relative;
         }
         
         .location-map iframe {
             width: 100%;
             height: 100%;
             border: none;
+        }
+        
+        .directions-button {
+            display: inline-block;
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            background: var(--terracotta);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .directions-button:hover {
+            background: var(--terracotta-dark);
+            transform: translateY(-2px);
         }
         
         .location-info {
@@ -1639,11 +1661,12 @@
             <div class="location-grid">
                 <div class="location-map">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.38250036831496!2d-87.07797868942345!3d20.62396474749269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e435ba9829d8d%3A0x202a921e9b08e76b!2sComida%20y%20Caf%C3%A9!5e0!3m2!1sen!2smx!4v1770597235176!5m2!1sen!2smx"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.5299498498087!2d-87.07836840000001!3d20.6239647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e435ba931dd43%3A0xac9418f4edc85c0d!2sShalala%20Caf%C3%A9!5e0!3m2!1sen!2smx!4v1234567890"
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+                    <a href="https://maps.app.goo.gl/UqvrqhLa5CoYrxeb7" target="_blank" class="directions-button">📍 Get Directions</a>
                 </div>
                 
                 <div class="location-info">
